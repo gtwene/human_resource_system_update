@@ -7,7 +7,7 @@ import User04 from '../../images/user-36-04.jpg';
 
 function DashboardAvatars() {
   return (
-    <ul className="flex flex-wrap justify-center sm:justify-start mb-8 sm:mb-0 -space-x-3 -ml-px">
+    <ul className="flex flex-wrap justify-center sm:justify-start mb-8 sm:mb-0 -space-x-3 -ml-px invisible">
       <li>
         <Link className="block" to="#0">
           <img className="w-9 h-9 rounded-full" src={User01} width="36" height="36" alt="User 01" />
