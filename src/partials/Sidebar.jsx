@@ -89,7 +89,7 @@ function Sidebar({ sidebarOpen, setSidebarOpen }) {
           </NavLink>
         </div>
 
-        {/* Links */}
+        {/* Links */} 
         <div className="space-y-8">
           {/* Pages group */}
           <div>
