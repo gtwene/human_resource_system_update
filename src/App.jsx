@@ -29,13 +29,13 @@ function App() {
   }, [location.pathname]); // triggered on route change
 
   return (
-    <>
+    <React.Fragment>
       <Routes>
         {/* <Route exact path="/" element={<Dashboard />} /> */}
             <Route path="/dashboard" element={<Dashboard />} />
-            <Route path="/" element={<Dashboard />} /> 
+            <Route path="/*" element={<Dashboard />} />
       </Routes>
-    </>
+    </React.Fragment>
   );
 }
 

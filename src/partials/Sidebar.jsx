@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 
 import SidebarLinkGroup from './SidebarLinkGroup';
+import Employees from './SubSideBarItems/Employees';
 
 function Sidebar({ sidebarOpen, setSidebarOpen }) {
   const location = useLocation();
@@ -150,7 +151,7 @@ function Sidebar({ sidebarOpen, setSidebarOpen }) {
                           <li className="mb-1 last:mb-0">
                             <NavLink
                               end
-                              to="/"
+                              to="/main"
                               className={({ isActive }) =>
                                 'block text-slate-400 hover:text-slate-200 transition duration-150 truncate ' + (isActive ? '!text-indigo-500' : '')
                               }
@@ -207,15 +208,15 @@ function Sidebar({ sidebarOpen, setSidebarOpen }) {
                           <div className="flex items-center">
                             <svg className="shrink-0 h-6 w-6" viewBox="0 0 24 24">
                               <path
-                                className={`fill-current text-slate-400 ${pathname.includes('ecommerce') && 'text-indigo-300'}`}
+                                className={`fill-current text-slate-400 ${pathname.includes('employees') && 'text-indigo-300'}`}
                                 d="M13 15l11-7L11.504.136a1 1 0 00-1.019.007L0 7l13 8z"
                               />
                               <path
-                                className={`fill-current text-slate-700 ${pathname.includes('ecommerce') && '!text-indigo-600'}`}
+                                className={`fill-current text-slate-700 ${pathname.includes('employees') && '!text-indigo-600'}`}
                                 d="M13 15L0 7v9c0 .355.189.685.496.864L13 24v-9z"
                               />
                               <path
-                                className={`fill-current text-slate-600 ${pathname.includes('ecommerce') && 'text-indigo-500'}`}
+                                className={`fill-current text-slate-600 ${pathname.includes('employees') && 'text-indigo-500'}`}
                                 d="M13 15.047V24l10.573-7.181A.999.999 0 0024 16V8l-11 7.047z"
                               />
                             </svg>
@@ -235,19 +236,18 @@ function Sidebar({ sidebarOpen, setSidebarOpen }) {
                         <ul className={`pl-9 mt-1 ${!open && 'hidden'}`}>
                           <li className="mb-1 last:mb-0">
                             <NavLink
-                              end
-                              to="/"
+                              to="/employees"
                               className="block text-slate-400 hover:text-slate-200 transition duration-150 truncate"
                             >
                               <span className="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">
-                                Customers
+                                Employees
                               </span>
                             </NavLink>
                           </li>
                           <li className="mb-1 last:mb-0">
                             <NavLink
                               end
-                              to="/"
+                              to="/orders"
                               className="block text-slate-400 hover:text-slate-200 transition duration-150 truncate"
                             >
                               <span className="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">
