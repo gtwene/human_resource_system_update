@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import swal from 'sweetalert';
 import { SiGnuprivacyguard } from 'react-icons/si'
 import { data } from 'autoprefixer';
+import './App.css'
 
 
 async function loginUser(credentials) {
@@ -35,7 +36,7 @@ export default function Signin() {
       .then((value) => {
         localStorage.setItem('accessToken', response['token']);
         localStorage.setItem('user', JSON.stringify(response['user']));
-        window.location.href = "/main";
+        window.location.href = "/main-admin";
       });
     } else {
       swal("Failed", response.message, "error");
@@ -47,14 +48,14 @@ export default function Signin() {
   
 
   return (
-    <div className='h-screen flex flex-col justify-center items-center bg-gradient-to-r from-cyan-300 to-indigo-100' id='container'>
+    <div className='backgroundScreen h-screen flex flex-col justify-center items-center' id='container'>
       <div className='mb-5'>
-        <h1 className='text-2xl font-bold '>Human Resource System</h1>
+        <h1 className='text-2xl font-bold text-white '>Human Resource System</h1>
       </div>
 
         <div class="w-full max-w-xs">
           
-          <form class="bg-white shadow-2xl rounded-lg px-6 pt-6 pb-8 mb-4" onSubmit={handleSubmit}>
+          <form class="bg-white opacity-80 shadow-2xl rounded-lg px-6 pt-6 pb-8 mb-4" onSubmit={handleSubmit}>
           <div className='mb-5 justify-center items-center flex flex-col '>
             <div className='border-2 border-indigo-600 p-3 rounded-full bg-blue-500' >
              <div><SiGnuprivacyguard className=''/></div>

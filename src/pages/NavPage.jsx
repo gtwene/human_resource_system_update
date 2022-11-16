@@ -11,7 +11,7 @@ function NavPage() {
         <Routes>
             <Route path='/employees' element={<Employees />} />
             <Route path='/orders' element={<Orders />} />
-            <Route path='/main' element={<Main />} />
+            <Route path='/main-admin' element={<Main />} />
         </Routes>
     </React.Fragment>
   )
